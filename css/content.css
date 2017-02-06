@@ -1,3 +1,9 @@
+/* Right Column */
+
+div#rightCol {
+    display: none;
+}
+
 /* Pagelet Sidebar */
 
 #pagelet_sidebar {
