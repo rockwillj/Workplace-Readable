@@ -51,6 +51,7 @@ function addExpandAllButton($content) {
  * @author Atsushi Kanbara (@atsukanrock)
  * @license MIT License
  * @see https://sansan.facebook.com/groups/663284547154538/permalink/712895618860097/
+ * @note "See More" links in user content are supported by @rockwillj
  */
 function expandAll(content) {
     var triggerEvent = function (element, event) {
@@ -65,6 +66,7 @@ function expandAll(content) {
     };
     var intervalId = setInterval(function () {
         var seeMoreLinks = content.getElementsByClassName('fss');
+        var seeMoreLinksInContent = content.getElementsByClassName('see_more_link');
         var commentLinks = content.getElementsByClassName('UFICommentLink');
         var pagerLinks = content.getElementsByClassName('UFIPagerLink');
         var triggered = false;
@@ -72,6 +74,15 @@ function expandAll(content) {
         for (var i = 0; i < seeMoreLinks.length; i++) {
             triggerEvent(seeMoreLinks[i], 'click');
             triggered = true;
+        }
+        for (var i = 0; i < seeMoreLinksInContent.length; i++) {
+            if (seeMoreLinksInContent[i].closest('.text_exposed') == null) {
+                // "See More" links in user content are supported by @rockwillj
+                // If the ancestor element has 'text_exposed' class, it means "See More" link is collapsed.
+                // If not, it means "See More" link is expanded already and also hidden.
+                triggerEvent(seeMoreLinksInContent[i], 'click');
+                triggered = true;
+            }
         }
         for (var i = 0; i < commentLinks.length; i++) {
             if (commentLinks[i].closest('.UFIReplyList').getElementsByClassName('UFIRow').length == 1) {
