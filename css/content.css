@@ -98,6 +98,32 @@ div#rightCol {
     -webkit-font-smoothing: antialiased;
 }
 
+/* Scroll to Top */
+
+#scrollToTop {
+    position: fixed;
+    bottom: 0;
+    padding-left: 4px;
+    display: none;
+}
+
+#scrollToTop a {
+    text-decoration: none;
+}
+
+#scrollToTop i {
+    display: inline-block;
+    width: 53px;
+    height: 53px;
+    background-image: url('chrome-extension://__MSG_@@extension_id__/image/top.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#scrollToTop i:hover {
+    background-position: -53px 0;
+}
+
 /* Media Query */
 
 @media (max-width: 1920px) { /* WUXGA */

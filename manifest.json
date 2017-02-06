@@ -33,6 +33,9 @@
             ]
         }
     ],
+    "web_accessible_resources": [
+        "image/top.png"
+    ],
     "homepage_url": "https://github.com/rockwillj/Workplace-Readable",
     "permissions": [
         "*://*.facebook.com/*"

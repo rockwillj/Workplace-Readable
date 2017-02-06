@@ -69,3 +69,31 @@ $(document).bind('wpr:onload', function () {
         moveTrendingPosts();
     }
 });
+
+/*
+ * Add "Scroll to Top" button
+ */
+$(document).bind('wpr:onload', function () {
+    var $scrollToTop = $('<div id="scrollToTop"><a href="#" title="Scroll to Top">'
+        + '<i class="img"></i></a></div>');
+    $('#contentArea').after($scrollToTop);
+
+    $('#scrollToTop a').click(function () {
+        $('body, html').animate({ scrollTop: 0 }, 'slow');
+        return false;
+    });
+
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 200) {
+            $scrollToTop.fadeIn('slow');
+        } else {
+            $scrollToTop.fadeOut('slow');
+        }
+    });
+
+    var setMarginLeft = function () {
+        $scrollToTop.css('marginLeft', $('#contentArea').width());
+    }
+    setMarginLeft();
+    $(window).resize(setMarginLeft);
+});
