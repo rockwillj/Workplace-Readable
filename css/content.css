@@ -1,0 +1,15 @@
+
+/* Media Query */
+
+@media (max-width: 1920px) { /* WUXGA */
+}
+@media (max-width: 1600px) { /* UXGA */
+}
+@media (max-width: 1280px) { /* SXGA */
+}
+@media (max-width: 1024px) { /* XGA */
+}
+@media (max-width: 800px) { /* SVGA */
+}
+@media (max-width: 640px) { /* VGA */
+}
