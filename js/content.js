@@ -44,3 +44,28 @@ $(document).bind('wpr:onload', function () {
         pagingObserver.observe($pager[0], { childList: true, subtree: true });
     }
 });
+
+/*
+ * Move "Trending Posts" from right column to content area
+ */
+$(document).bind('wpr:onload', function () {
+    var $trending = $('#pagelet_work_trending_rhc_unit');
+
+    var moveTrendingPosts = function () {
+        $trending.find('a[data-hovercard-position]')
+            .attr('data-hovercard-position', 'below')
+            .end()
+            .insertAfter('#pagelet_composer');
+    }
+
+    if ($trending.is(':empty')) {
+        var trendingObserver = new MutationObserver(function (mutation) {
+            if (mutation[0].addedNodes) {
+                moveTrendingPosts();
+            }
+        });
+        trendingObserver.observe($trending[0], { childList: true });
+    } else {
+        moveTrendingPosts();
+    }
+});
