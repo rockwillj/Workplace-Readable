@@ -21,6 +21,9 @@
             "matches": [
                 "*://*.facebook.com/*"
             ],
+            "exclude_matches": [
+                "*://www.facebook.com/*"
+            ],
             "js": [
                 "js/jquery-2.2.4.min.js",
                 "js/content.js"
