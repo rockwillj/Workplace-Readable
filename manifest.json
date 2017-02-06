@@ -26,7 +26,8 @@
             ],
             "js": [
                 "js/jquery-2.2.4.min.js",
-                "js/content.js"
+                "js/content.js",
+                "js/expand-all.js"
             ],
             "css": [
                 "css/content.css"
@@ -34,6 +35,7 @@
         }
     ],
     "web_accessible_resources": [
+        "image/plus.png",
         "image/top.png"
     ],
     "homepage_url": "https://github.com/rockwillj/Workplace-Readable",
