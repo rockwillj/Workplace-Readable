@@ -14,6 +14,14 @@
 ._43o4[role="tablist"] {
     width: auto !important;
 }
+
+/* Left Column */
+
+.navHeader {
+    border-bottom: solid 1px #90949c;
+    margin-bottom: 4px !important;
+}
+
 /* Right Column */
 
 div#rightCol {
