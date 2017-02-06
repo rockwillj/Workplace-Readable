@@ -1,7 +1,29 @@
+/* Global Container */
+
+#globalContainer {
+    width: 80% !important;
+    padding-right: 0 !important;
+}
+
+/* Header */
+
+#fbCoverImageContainer {
+    overflow-x: hidden;
+}
+
+._43o4[role="tablist"] {
+    width: auto !important;
+}
 /* Right Column */
 
 div#rightCol {
     display: none;
+}
+
+/* Content Area */
+
+#contentArea {
+    width: 100% !important;
 }
 
 /* Pagelet Sidebar */
@@ -10,18 +32,45 @@ div#rightCol {
     display: none;
 }
 
+/* Profile */
+
+.timelineLayout #mainContainer #contentArea {
+    width: 100% !important;
+}
+
+.timelineLayout ._5nb8 {
+    width: calc(100% - 323px - 15px) !important;
+}
+
+._4lh .fbTimelineTwoColumn[data-type="s"] {
+    width: 100% !important;
+}
+
+.fbTimelineUnit.fbTimelineTwoColumn .timelineUnitContainer.fbTimelineComposerUnit {
+    width: 100% !important;
+}
+
+/* Settings */
+
+.SettingsPage.hasLeftCol #contentArea {
+    padding: 0 !important;
+}
 
 /* Media Query */
 
 @media (max-width: 1920px) { /* WUXGA */
 }
 @media (max-width: 1600px) { /* UXGA */
+    #globalContainer { width: 85% !important; }
 }
 @media (max-width: 1280px) { /* SXGA */
+    #globalContainer { width: 90% !important; }
 }
 @media (max-width: 1024px) { /* XGA */
+    #globalContainer { width: 95% !important; }
 }
 @media (max-width: 800px) { /* SVGA */
+    #globalContainer { width: 100% !important; }
 }
 @media (max-width: 640px) { /* VGA */
 }
