@@ -1,0 +1,18 @@
+{
+    "manifest_version": 2,
+    "name": "Workplace Readable",
+    "version": "1.0.0",
+    "description": "Chrome extension to make Workplace a bit easier to read",
+    "content_scripts": [
+        {
+            "run_at": "document_end",
+            "matches": [
+                "*://*.facebook.com/*"
+            ]
+        }
+    ],
+    "homepage_url": "https://github.com/rockwillj/Workplace-Readable",
+    "permissions": [
+        "*://*.facebook.com/*"
+    ]
+}
