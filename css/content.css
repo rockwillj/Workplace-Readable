@@ -64,6 +64,19 @@ div#rightCol {
     padding: 0 !important;
 }
 
+/* Highlight "Recent Activity" and "Older" */
+
+#contentArea div[role="heading"] {
+    border-left: 4px solid #4267b2;
+    margin: 28px 8px;
+    padding: 2px 8px;
+}
+
+#contentArea div[role="heading"] span {
+    color: #1d2129;
+    font-size: 14px;
+}
+
 /* Media Query */
 
 @media (max-width: 1920px) { /* WUXGA */
