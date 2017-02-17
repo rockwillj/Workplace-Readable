@@ -1,0 +1,160 @@
+/* Global Container */
+
+#globalContainer {
+    width: 80% !important;
+    padding-right: 0 !important;
+}
+
+/* Header */
+
+#fbCoverImageContainer {
+    overflow-x: hidden;
+}
+
+._43o4[role="tablist"] {
+    width: auto !important;
+}
+
+/* Left Column */
+
+.navHeader {
+    border-bottom: solid 1px #90949c;
+    margin-bottom: 4px !important;
+}
+
+/* Right Column */
+
+div#rightCol {
+    display: none;
+}
+
+/* Content Area */
+
+#contentArea {
+    width: 100% !important;
+}
+
+/* Pagelet Sidebar */
+
+#pagelet_sidebar {
+    display: none;
+}
+
+/* Profile */
+
+.timelineLayout #mainContainer #contentArea {
+    width: 100% !important;
+}
+
+.timelineLayout ._5nb8 {
+    width: calc(100% - 323px - 15px) !important;
+}
+
+._4lh .fbTimelineTwoColumn[data-type="s"] {
+    width: 100% !important;
+}
+
+.fbTimelineUnit.fbTimelineTwoColumn .timelineUnitContainer.fbTimelineComposerUnit {
+    width: 100% !important;
+}
+
+/* Settings */
+
+.SettingsPage.hasLeftCol #contentArea {
+    padding: 0 !important;
+}
+
+/* "Recent Activity" and "Older" */
+
+#contentArea div[role="heading"] {
+    border-left: 4px solid #4267b2;
+    margin: 28px 8px;
+    padding: 2px 8px;
+}
+
+#contentArea div[role="heading"] span {
+    color: #1d2129;
+    font-size: 14px;
+}
+
+/* Trending Posts in Content Area  */
+
+#contentArea #pagelet_work_trending_rhc_unit {
+    background-color: #fff;
+    padding: 0 12px;
+}
+
+#contentArea #pagelet_work_trending_rhc_unit ._3-96 {
+    padding-bottom: 4px;
+}
+
+#contentArea #pagelet_work_trending_rhc_unit .uiHeader {
+    background: none;
+    padding: 12px 0 10px 0;
+}
+
+#contentArea #pagelet_work_trending_rhc_unit .uiHeaderTitle {
+    text-transform: uppercase;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Scroll to Top */
+
+#scrollToTop {
+    position: fixed;
+    bottom: 0;
+    padding-left: 4px;
+    display: none;
+}
+
+#scrollToTop a {
+    text-decoration: none;
+}
+
+#scrollToTop i {
+    display: inline-block;
+    width: 53px;
+    height: 53px;
+    background-image: url('chrome-extension://__MSG_@@extension_id__/image/top.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#scrollToTop i:hover {
+    background-position: -53px 0;
+}
+
+/* Expand All */
+
+.expandAll {
+    float: right;
+    margin: -5px 20px 10px 10px;
+}
+
+.expandAll i {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background-image: url('chrome-extension://__MSG_@@extension_id__/image/plus.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* Media Query */
+
+@media (max-width: 1920px) { /* WUXGA */
+}
+@media (max-width: 1600px) { /* UXGA */
+    #globalContainer { width: 85% !important; }
+}
+@media (max-width: 1280px) { /* SXGA */
+    #globalContainer { width: 90% !important; }
+}
+@media (max-width: 1024px) { /* XGA */
+    #globalContainer { width: 95% !important; }
+}
+@media (max-width: 800px) { /* SVGA */
+    #globalContainer { width: 100% !important; }
+}
+@media (max-width: 640px) { /* VGA */
+}
