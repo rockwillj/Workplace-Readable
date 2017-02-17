@@ -71,7 +71,7 @@ $(document).bind('wpr:onload', function () {
 });
 
 /*
- * Add "Scroll to Top" button
+ * Place "Scroll to Top" button at the bottom right of the page
  */
 $(document).bind('wpr:onload', function () {
     var $scrollToTop = $('<div id="scrollToTop"><a href="#" title="Scroll to Top">'

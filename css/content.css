@@ -64,7 +64,7 @@ div#rightCol {
     padding: 0 !important;
 }
 
-/* Highlight "Recent Activity" and "Older" */
+/* "Recent Activity" and "Older" */
 
 #contentArea div[role="heading"] {
     border-left: 4px solid #4267b2;
@@ -124,7 +124,7 @@ div#rightCol {
     background-position: -53px 0;
 }
 
-/* Expand ALL */
+/* Expand All */
 
 .expandAll {
     float: right;

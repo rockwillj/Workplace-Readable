@@ -1,15 +1,15 @@
 /* 
- * Add "Expand All" button in each user content
+ * Place "Expand All" button in each user content
  */
 
-// User content inserted dynamically on ajax loading
+// User contents inserted dynamically on ajax loading
 $(document).bind('wpr:onload', function () {
     $('#contentArea .userContent').each(function () {
         addExpandAllButton($(this));
     });
 });
 
-// User content inserted dynamically on ajax paging
+// User contents inserted dynamically on ajax paging
 $(document).bind('wpr:onpage', function (event, data) {
     $(data).find('.userContent').each(function () {
         addExpandAllButton($(this));
@@ -51,7 +51,7 @@ function addExpandAllButton($content) {
  * @author Atsushi Kanbara (@atsukanrock)
  * @license MIT License
  * @see https://sansan.facebook.com/groups/663284547154538/permalink/712895618860097/
- * @note "See More" links in user content are supported by @rockwillj
+ * @note "See More" links in user contents are supported by @rockwillj
  */
 function expandAll(content) {
     var triggerEvent = function (element, event) {
@@ -77,7 +77,7 @@ function expandAll(content) {
         }
         for (var i = 0; i < seeMoreLinksInContent.length; i++) {
             if (seeMoreLinksInContent[i].closest('.text_exposed') == null) {
-                // "See More" links in user content are supported by @rockwillj
+                // "See More" links in user contents are supported by @rockwillj
                 // If the ancestor element has 'text_exposed' class, it means "See More" link is collapsed.
                 // If not, it means "See More" link is expanded already and also hidden.
                 triggerEvent(seeMoreLinksInContent[i], 'click');
