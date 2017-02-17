@@ -48,7 +48,7 @@ function addExpandAllButton($content) {
 /**
  * WORKPLACE EXPAND ALL (全部開く君)
  * 
- * @author Atsushi Kanbara (@atsukanrock)
+ * @author Atsushi Kambara (@atsukanrock)
  * @license MIT License
  * @see https://sansan.facebook.com/groups/663284547154538/permalink/712895618860097/
  * @note "See More" links in user contents are supported by @rockwillj

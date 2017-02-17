@@ -163,6 +163,7 @@ Workplace では長文の投稿内容や一定件数以上のコメントは適�
 
 ## Copyright & License
 
-Copyright © 2017 Josuke Iwata (@rockwillj).
+Copyright © 2017 Josuke Iwata (@rockwillj)
+Copyright © 2016 Atsushi Kambara (@atsukanrock, in Expand All feature)
 
 This software is released under the MIT License, see [LICENSE](LICENSE).

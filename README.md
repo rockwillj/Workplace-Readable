@@ -163,6 +163,7 @@ That's all.
 
 ## Copyright & License
 
-Copyright © 2017 Josuke Iwata (@rockwillj).
+Copyright © 2017 Josuke Iwata (@rockwillj)
+Copyright © 2016 Atsushi Kambara (@atsukanrock, in Expand All feature)
 
 This software is released under the MIT License, see [LICENSE](LICENSE).
