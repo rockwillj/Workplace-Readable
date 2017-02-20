@@ -103,8 +103,13 @@ div#rightCol {
 #scrollToTop {
     position: fixed;
     bottom: 0;
-    padding-left: 4px;
+    padding-left: 8px;
+    padding-bottom: 29px;
     display: none;
+}
+
+.sidebarMode #scrollToTop {
+    padding-bottom: 4px;
 }
 
 #scrollToTop a {
