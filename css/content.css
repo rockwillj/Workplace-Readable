@@ -113,15 +113,15 @@ div#rightCol {
 
 #scrollToTop i {
     display: inline-block;
-    width: 53px;
-    height: 53px;
+    width: 30px;
+    height: 30px;
     background-image: url('chrome-extension://__MSG_@@extension_id__/image/top.png');
     background-size: cover;
     background-repeat: no-repeat;
 }
 
 #scrollToTop i:hover {
-    background-position: -53px 0;
+    background-position: -30px 0;
 }
 
 /* Expand All */
