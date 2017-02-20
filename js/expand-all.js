@@ -23,11 +23,11 @@ function addExpandAllButton($content) {
     }
 
     var shouldAdd = false;
-    var $fbContent = $content.closest('.fbUserContent');
-    if ($fbContent.find('.fss, .see_more_link, .UFIPagerLink').length > 0) {
+    var $wrapper = $content.closest('.userContentWrapper');
+    if ($wrapper.find('.fss, .see_more_link, .UFIPagerLink').length > 0) {
         shouldAdd = true;
     }
-    $fbContent.find('.UFICommentLink').each(function () {
+    $wrapper.find('.UFICommentLink').each(function () {
         if ($(this).closest('.UFIReplyList').children('.UFIRow').length == 1) {
             shouldAdd = true;
         }
@@ -39,7 +39,7 @@ function addExpandAllButton($content) {
         $content.prepend($element);
 
         $element.click(function () {
-            expandAll($fbContent[0]);
+            expandAll($wrapper[0]);
             $(this).fadeOut('slow');
         });
     }
