@@ -46,27 +46,26 @@ $(document).bind('wpr:onload', function () {
 });
 
 /*
- * Move "Trending Posts" from right column to content area
+ * Show "Trending Posts" above content area
  */
 $(document).bind('wpr:onload', function () {
     var $trending = $('#pagelet_work_trending_rhc_unit');
 
-    var moveTrendingPosts = function () {
+    // set hover position to below
+    var setHoverBelow = function () {
         $trending.find('a[data-hovercard-position]')
-            .attr('data-hovercard-position', 'below')
-            .end()
-            .insertAfter('#pagelet_composer');
+            .attr('data-hovercard-position', 'below');
     }
 
     if ($trending.is(':empty')) {
         var trendingObserver = new MutationObserver(function (mutation) {
             if (mutation[0].addedNodes) {
-                moveTrendingPosts();
+                setHoverBelow();
             }
         });
         trendingObserver.observe($trending[0], { childList: true });
     } else {
-        moveTrendingPosts();
+        setHoverBelow();
     }
 });
 

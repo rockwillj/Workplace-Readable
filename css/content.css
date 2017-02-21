@@ -25,6 +25,43 @@
 /* Right Column */
 
 div#rightCol {
+    width: 100% !important;
+    clear: right;
+    margin-bottom: -16px;
+}
+
+#rightCol .fixed_elem {
+    position: static !important;
+}
+
+#rightCol .fixed_elem + div {
+    height: 0 !important;
+}
+
+.newsFeedComposer .home_right_column {
+    min-height: 0 !important;
+}
+
+.groups_rhc .uiBoxWhite {
+    border: none !important;
+}
+
+#pagelet_ego_pane,
+#rhc_work_feedback_pagelet,
+#pagelet_rhc_footer {
+    display: none;
+}
+
+#groupsNewMembersLink,
+#admin_flyout_container,
+.groups_rhc .groupRHCAddMemberTypeaheadBox,
+.groups_rhc .groupsRHCSectionHeader,
+.groups_rhc .groupsRHCSectionHeader + span {
+    display: none;
+}
+
+.groups_rhc > div:not(:first-child),
+.groups_rhc > div:first-child > div:first-child {
     display: none;
 }
 
