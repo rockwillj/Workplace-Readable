@@ -1,18 +1,7 @@
-/* Global Container */
-
-#globalContainer {
-    width: 80% !important;
-    padding-right: 0 !important;
-}
-
 /* Header */
 
 #fbCoverImageContainer {
     overflow-x: hidden;
-}
-
-._43o4[role="tablist"] {
-    width: auto !important;
 }
 
 /* Left Column */
@@ -20,6 +9,10 @@
 .navHeader {
     border-bottom: solid 1px #90949c;
     margin-bottom: 4px !important;
+}
+
+.tinyWidth .sideNavItem ._5afe {
+    margin-left: 0 !important;
 }
 
 /* Right Column */
@@ -80,7 +73,7 @@ div#rightCol {
 /* Profile */
 
 .timelineLayout #mainContainer #contentArea {
-    width: 100% !important;
+    width: 1014px !important;
 }
 
 .timelineLayout ._5nb8 {
@@ -140,12 +133,14 @@ div#rightCol {
 #scrollToTop {
     position: fixed;
     bottom: 0;
+    right: 16px;
     padding-left: 8px;
     padding-bottom: 29px;
     display: none;
 }
 
 .sidebarMode #scrollToTop {
+    right: auto;
     padding-bottom: 4px;
 }
 
@@ -187,16 +182,14 @@ div#rightCol {
 @media (max-width: 1920px) { /* WUXGA */
 }
 @media (max-width: 1600px) { /* UXGA */
-    #globalContainer { width: 85% !important; }
 }
 @media (max-width: 1280px) { /* SXGA */
-    #globalContainer { width: 90% !important; }
 }
 @media (max-width: 1024px) { /* XGA */
-    #globalContainer { width: 95% !important; }
+    #globalContainer { width: 100% !important; }
+    .timelineLayout #mainContainer #contentArea { width: 100% !important; }
 }
 @media (max-width: 800px) { /* SVGA */
-    #globalContainer { width: 100% !important; }
 }
 @media (max-width: 640px) { /* VGA */
 }
