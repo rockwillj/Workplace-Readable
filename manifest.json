@@ -44,6 +44,7 @@
     },
     "homepage_url": "https://github.com/rockwillj/Workplace-Readable",
     "permissions": [
-        "*://*.facebook.com/*"
+        "*://*.facebook.com/*",
+        "storage"
     ]
 }
