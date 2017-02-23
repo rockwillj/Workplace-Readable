@@ -48,7 +48,7 @@ div#rightCol {
 #groupsNewMembersLink,
 #admin_flyout_container,
 .groups_rhc .groupRHCAddMemberTypeaheadBox,
-.groups_rhc .groupsRHCSectionHeader,
+.groups_rhc .groupsRHCSectionHeader h6,
 .groups_rhc .groupsRHCSectionHeader + span {
     display: none;
 }
@@ -56,6 +56,15 @@ div#rightCol {
 .groups_rhc > div:not(:first-child),
 .groups_rhc > div:first-child > div:first-child {
     display: none;
+}
+
+.groupsEditDescriptionArea > .groupsRHCSectionHeader {
+    margin-bottom: -12px !important;
+}
+
+#groupsDescriptionBox .groupsEditDescriptionText {
+    width: 99% !important;
+    height: 150px !important;
 }
 
 /* Content Area */
