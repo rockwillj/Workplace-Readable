@@ -38,6 +38,10 @@
         "image/plus.png",
         "image/top.png"
     ],
+    "options_ui": {
+        "page": "html/options.html",
+        "chrome_style": true
+    },
     "homepage_url": "https://github.com/rockwillj/Workplace-Readable",
     "permissions": [
         "*://*.facebook.com/*"
