@@ -8,18 +8,26 @@ $(function () {
 
     function loadOptions() {
         chrome.storage.sync.get({
+            sidebarDisplay: false,
+            trendingDisplay: true,
             color: '#365899',
             bgColor: '#ffff00'
         }, function (items) {
+            $('#sidebarDisplay').prop('checked', items.sidebarDisplay);
+            $('#trendingDisplay').prop('checked', items.trendingDisplay);
             $('#mentionColor').next('input').andSelf().val(items.color);
             $('#mentionBgColor').next('input').andSelf().val(items.bgColor);
         });
     }
 
     function saveOptions() {
+        var sidebarDisplay = $('#sidebarDisplay').prop('checked');
+        var trendingDisplay = $('#trendingDisplay').prop('checked');
         var color = $('#mentionColor').val();
         var bgColor = $('#mentionBgColor').val();
         chrome.storage.sync.set({
+            sidebarDisplay: sidebarDisplay,
+            trendingDisplay: trendingDisplay,
             color: color,
             bgColor: bgColor
         }, function () {

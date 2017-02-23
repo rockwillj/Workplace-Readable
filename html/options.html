@@ -5,12 +5,12 @@
   <title>Workplace Readable Options</title>
   <style>
     .option {
-      margin-bottom: 1em;
+      margin: 0 0.5em 1em;
     }
     
     .option label {
-      display: block;
-      margin-bottom: 0.5em;
+      display: inline-block;
+      width: 120px;
     }
     
     .option input[type="color"] {
@@ -38,6 +38,16 @@
 </head>
 
 <body>
+  <h4>Display Items</h4>
+  <div class="option">
+    <input id="sidebarDisplay" type="checkbox">
+    <label for="sidebarDisplay">Pagelet Sidebar</label>
+  </div>
+  <div class="option">
+    <input id="trendingDisplay" type="checkbox">
+    <label for="trendingDisplay">Trending Posts</label>
+  </div>
+
   <h4>Highlight Mentions to Me</h4>
   <div class="option">
     <label for="mentionColor">Color</label>

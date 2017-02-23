@@ -21,6 +21,7 @@ div#rightCol {
     width: 100% !important;
     clear: right;
     margin-bottom: -16px;
+    display: none; /* delayed display by option */
 }
 
 #rightCol .fixed_elem {
