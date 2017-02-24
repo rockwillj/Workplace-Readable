@@ -59,7 +59,7 @@ div#rightCol {
     display: none;
 }
 
-.groupsEditDescriptionArea > .groupsRHCSectionHeader {
+.groupsEditDescriptionArea .uiHeaderActions {
     margin-bottom: -12px !important;
 }
 
