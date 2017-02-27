@@ -1,3 +1,17 @@
+/* Global Container */
+
+.liquidDesign #globalContainer {
+    width: 80% !important;
+}
+
+.liquidDesign.sidebarDisplay.sidebarMode #globalContainer {
+    width: calc(90% - 206px) !important;
+}
+
+.liquidDesign:not(.sidebarDisplay) #globalContainer {
+    padding-right: 0 !important;
+}
+
 /* Header */
 
 #fbCoverImageContainer {
@@ -92,6 +106,10 @@
 
 .timelineLayout #mainContainer #contentArea {
     width: 1014px !important;
+}
+
+.liquidDesign .timelineLayout #mainContainer #contentArea {
+    width: 100% !important;
 }
 
 .timelineLayout ._5nb8 {
@@ -200,11 +218,14 @@
 @media (max-width: 1920px) { /* WUXGA */
 }
 @media (max-width: 1600px) { /* UXGA */
+    .liquidDesign #globalContainer { width: 85% !important; }
+    .liquidDesign.sidebarDisplay.sidebarMode #globalContainer { width: calc(95% - 206px) !important; }
 }
 @media (max-width: 1280px) { /* SXGA */
+    .liquidDesign #globalContainer { width: 90% !important; }
 }
 @media (max-width: 1024px) { /* XGA */
-    #globalContainer { width: 100% !important; }
+    #globalContainer, .liquidDesign #globalContainer { width: 100% !important; }
     .timelineLayout #mainContainer #contentArea { width: 100% !important; }
 }
 @media (max-width: 800px) { /* SVGA */

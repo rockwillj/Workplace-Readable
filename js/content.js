@@ -17,14 +17,18 @@ $(function () {
 
     // Load options from chrome.storage
     chrome.storage.sync.get({
+        liquidDesign: false,
         sidebarDisplay: false,
         trendingDisplay: true,
         color: '#365899',
         bgColor: '#ffff00'
     }, function (items) {
-        /*
-         * Display Items
-         */
+        // General
+        if (items.liquidDesign) {
+            $('html').addClass('liquidDesign');
+        }
+
+        // Display Items
         if (items.sidebarDisplay) {
             $('html').addClass('sidebarDisplay');
         }

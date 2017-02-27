@@ -8,11 +8,13 @@ $(function () {
 
     function loadOptions() {
         chrome.storage.sync.get({
+            liquidDesign: false,
             sidebarDisplay: false,
             trendingDisplay: true,
             color: '#365899',
             bgColor: '#ffff00'
         }, function (items) {
+            $('#liquidDesign').prop('checked', items.liquidDesign);
             $('#sidebarDisplay').prop('checked', items.sidebarDisplay);
             $('#trendingDisplay').prop('checked', items.trendingDisplay);
             $('#mentionColor').next('input').andSelf().val(items.color);
@@ -21,11 +23,13 @@ $(function () {
     }
 
     function saveOptions() {
+        var liquidDesign = $('#liquidDesign').prop('checked');
         var sidebarDisplay = $('#sidebarDisplay').prop('checked');
         var trendingDisplay = $('#trendingDisplay').prop('checked');
         var color = $('#mentionColor').val();
         var bgColor = $('#mentionBgColor').val();
         chrome.storage.sync.set({
+            liquidDesign: liquidDesign,
             sidebarDisplay: sidebarDisplay,
             trendingDisplay: trendingDisplay,
             color: color,
