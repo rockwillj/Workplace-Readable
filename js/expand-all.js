@@ -2,6 +2,8 @@
  * Place "Expand All" button in each user content
  */
 
+(function () {
+
 // User contents inserted dynamically on ajax loading
 $(document).bind('wpr:onload', function () {
     $('#contentArea .userContent').each(function () {
@@ -103,3 +105,5 @@ function expandAll(content) {
         }
     }, 1000);
 }
+
+})();
