@@ -102,6 +102,10 @@
     display: block;
 }
 
+.sidebarMode:not(.sidebarDisplay) ._55fl {
+    display: none !important;
+}
+
 /* Profile */
 
 .timelineLayout #mainContainer #contentArea {
