@@ -44,6 +44,7 @@
 
 #rightCol .fixed_elem {
     position: static !important;
+    width: auto !important;
 }
 
 #rightCol .fixed_elem + div {
