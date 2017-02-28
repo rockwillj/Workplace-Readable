@@ -20,6 +20,18 @@
 
 /* Left Column */
 
+#leftCol.fixedTop {
+    position: fixed !important;
+    /* top: 43px; specify by code */
+    bottom: auto;
+}
+
+#leftCol.fixedBottom {
+    position: fixed !important;
+    top: auto !important;
+    bottom: 0;
+}
+
 .navHeader {
     border-bottom: solid 1px #90949c;
     margin-bottom: 4px !important;

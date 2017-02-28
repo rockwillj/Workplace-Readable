@@ -51,6 +51,26 @@ $(function () {
             style.sheet.insertRule(rule, 0);
         }
     });
+
+    /*
+     * Fixed Side Navigation in Left Column
+     */
+    $(window).scroll(function () {
+        var windowHeight = $(this).height();
+        var barHeight = $('#pagelet_bluebar').height();
+        var leftColHeight = $('#leftCol').outerHeight() + barHeight;
+        var scrollTop = $(this).scrollTop();
+
+        if (leftColHeight <= windowHeight) {
+            $('#leftCol').addClass('fixedTop').css('top', barHeight).removeClass('fixedBottom');
+        } else {
+            if (leftColHeight - windowHeight <= scrollTop) {
+                $('#leftCol').addClass('fixedBottom').removeClass('fixedTop');
+            } else {
+                $('#leftCol').removeClass('fixedTop fixedBottom');
+            }
+        }
+    });
 });
 
 // onpage: Trigger ajax paging event
