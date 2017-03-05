@@ -2,6 +2,9 @@ $(function () {
     loadOptions();
     $('#save').click(saveOptions);
     $('#reset').click(resetOptions);
+    $('.color input[type="text"]').change(function () {
+        $(this).next('input').val($(this).val());
+    });
     $('input[type="color"]').change(function () {
         $(this).prev('input').val($(this).val());
     });
