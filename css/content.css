@@ -160,26 +160,7 @@
     font-size: 14px;
 }
 
-/* Trending Posts in Content Area  */
-
-#contentArea #pagelet_work_trending_rhc_unit {
-    background-color: #fff;
-    padding: 0 12px;
-}
-
-#contentArea #pagelet_work_trending_rhc_unit ._3-96 {
-    padding-bottom: 4px;
-}
-
-#contentArea #pagelet_work_trending_rhc_unit .uiHeader {
-    background: none;
-    padding: 12px 0 10px 0;
-}
-
-#contentArea #pagelet_work_trending_rhc_unit .uiHeaderTitle {
-    text-transform: uppercase;
-    -webkit-font-smoothing: antialiased;
-}
+/* Trending Posts */
 
 .singleLineTrending #pagelet_work_trending_rhc_unit ._4bl9 {
     margin-right: 0.5em;
