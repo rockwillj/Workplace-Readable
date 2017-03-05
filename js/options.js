@@ -5,18 +5,25 @@ $(function () {
     $('input[type="color"]').change(function () {
         $(this).prev('input').val($(this).val());
     });
+    $('#trendingDisplay').change(function () {
+        var unchecked = !$(this).prop('checked');
+        $('#singleLineTrending').prop('disabled', unchecked)
+            .closest('.option').toggleClass('disabled', unchecked);
+    });
 
     function loadOptions() {
         chrome.storage.sync.get({
             liquidDesign: false,
             sidebarDisplay: false,
             trendingDisplay: true,
+            singleLineTrending: false,
             color: '#365899',
             bgColor: '#ffff00'
         }, function (items) {
             $('#liquidDesign').prop('checked', items.liquidDesign);
             $('#sidebarDisplay').prop('checked', items.sidebarDisplay);
-            $('#trendingDisplay').prop('checked', items.trendingDisplay);
+            $('#trendingDisplay').prop('checked', items.trendingDisplay).change();
+            $('#singleLineTrending').prop('checked', items.singleLineTrending);
             $('#mentionColor').next('input').andSelf().val(items.color);
             $('#mentionBgColor').next('input').andSelf().val(items.bgColor);
         });
@@ -26,12 +33,14 @@ $(function () {
         var liquidDesign = $('#liquidDesign').prop('checked');
         var sidebarDisplay = $('#sidebarDisplay').prop('checked');
         var trendingDisplay = $('#trendingDisplay').prop('checked');
+        var singleLineTrending = $('#singleLineTrending').prop('checked');
         var color = $('#mentionColor').val();
         var bgColor = $('#mentionBgColor').val();
         chrome.storage.sync.set({
             liquidDesign: liquidDesign,
             sidebarDisplay: sidebarDisplay,
             trendingDisplay: trendingDisplay,
+            singleLineTrending: singleLineTrending,
             color: color,
             bgColor: bgColor
         }, function () {

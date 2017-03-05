@@ -7,6 +7,10 @@
     .option {
       margin: 0 0.5em 1em;
     }
+
+    .option.disabled {
+      color: gray;
+    }
     
     .option label {
       display: inline-block;
@@ -40,7 +44,7 @@
     <label for="liquidDesign">Liquid Design</label>
   </div>
 
-  <h4>Display Items</h4>
+  <h4>Display</h4>
   <div class="option">
     <input id="sidebarDisplay" type="checkbox">
     <label for="sidebarDisplay">Pagelet Sidebar</label>
@@ -48,6 +52,11 @@
   <div class="option">
     <input id="trendingDisplay" type="checkbox">
     <label for="trendingDisplay">Trending Posts</label>
+
+    <div class="option disabled" style="margin-left: 1.5em; margin-top: 1em;">
+      <input id="singleLineTrending" type="checkbox" disabled="disabled">
+      <label for="singleLineTrending">Single Line</label>
+    </div>
   </div>
 
   <h4>Mentions to Me</h4>

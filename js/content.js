@@ -20,6 +20,7 @@ $(function () {
         liquidDesign: false,
         sidebarDisplay: false,
         trendingDisplay: true,
+        singleLineTrending: false,
         color: '#365899',
         bgColor: '#ffff00'
     }, function (items) {
@@ -28,12 +29,15 @@ $(function () {
             $('html').addClass('liquidDesign');
         }
 
-        // Display Items
+        // Display
         if (items.sidebarDisplay) {
             $('html').addClass('sidebarDisplay');
         }
         if (items.trendingDisplay) {
             $('html').addClass('trendingDisplay');
+        }
+        if (items.singleLineTrending) {
+            $('html').addClass('singleLineTrending');
         }
 
         /*

@@ -181,6 +181,12 @@
     -webkit-font-smoothing: antialiased;
 }
 
+.singleLineTrending #pagelet_work_trending_rhc_unit ._4bl9 {
+    margin-right: 0.5em;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
 /* Scroll to Top */
 
 #scrollToTop {
