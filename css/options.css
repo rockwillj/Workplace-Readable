@@ -1,5 +1,15 @@
+.options {
+    padding-left: 0;
+    list-style-type: none;
+}
+
 .option {
-    margin: 0 0.5em 1em;
+    margin: 0.5em 0.5em 1em;
+}
+
+.option > .options {
+    margin-left: 1em;
+    margin-top: 1em;
 }
 
 .option.disabled {
