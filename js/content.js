@@ -75,6 +75,13 @@ $(function () {
             }
         }
     });
+
+    /*
+     * Expand/Collapse Contacts (More Coworkers) List in Pagelet Sidebar
+     */
+    $(document).on('click', '#pagelet_sidebar ._55ob', function () {
+        $(this).parent().toggleClass('expandedList');
+    });
 });
 
 // onpage: Trigger ajax paging event

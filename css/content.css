@@ -119,6 +119,41 @@
     display: none !important;
 }
 
+#pagelet_sidebar ._55ob {
+    cursor: pointer;
+}
+
+#pagelet_sidebar ._55ob:hover {
+    background-color: #d8d6d4;
+}
+
+#pagelet_sidebar ._55oc > em::before {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    content: '';
+    background-image: url('chrome-extension://__MSG_@@extension_id__/image/plus.png');
+    background-size: cover;
+    margin-right: 4px;
+    margin-bottom: -1px;
+}
+
+#pagelet_sidebar .expandedList ._55oc > em::before {
+    background-image: url('chrome-extension://__MSG_@@extension_id__/image/minus.png');
+}
+
+#pagelet_sidebar .fbChatOrderedList ul {
+    display: none;
+}
+
+#pagelet_sidebar .fbChatOrderedList .expandedList > ul {
+    display: block;
+}
+
+.fbChatSidebar ._4oes {
+    background: transparent !important;
+}
+
 /* Profile */
 
 .timelineLayout #mainContainer #contentArea {
