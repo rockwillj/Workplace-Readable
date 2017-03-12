@@ -17,7 +17,7 @@ $(function () {
     function loadOptions() {
         chrome.storage.sync.get({
             liquidDesign: false,
-            sidebarDisplay: false,
+            sidebarDisplay: true,
             trendingDisplay: true,
             singleLineTrending: false,
             color: '#365899',
