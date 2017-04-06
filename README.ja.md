@@ -9,7 +9,7 @@ Workplace を少しだけ読みやすくする Chrome 拡張です。
 
 ## インストール
 
-* Chrome ウェブストア (近日公開)
+* [Chrome ウェブストア](https://chrome.google.com/webstore/detail/workplace-readable/leodekbefiofimagjbemhoheikoibjfn)
 
 ## 機能
 

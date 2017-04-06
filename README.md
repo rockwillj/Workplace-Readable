@@ -9,7 +9,7 @@ It provides about 10 features for now.
 
 ## Install
 
-* Chrome Web Store (coming soon)
+* [Chrome Web Store](https://chrome.google.com/webstore/detail/workplace-readable/leodekbefiofimagjbemhoheikoibjfn)
 
 ## Features
 
