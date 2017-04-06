@@ -25,7 +25,7 @@ function addExpandAllButton($content) {
     }
 
     var shouldAdd = false;
-    var $wrapper = $content.closest('.userContentWrapper');
+    var $wrapper = $content.closest('.userContentWrapper, .fbUserContent');
     if ($wrapper.find('.fss, .see_more_link, .UFIPagerLink').length > 0) {
         shouldAdd = true;
     }
