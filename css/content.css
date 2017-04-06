@@ -63,6 +63,10 @@
     height: 0 !important;
 }
 
+#rightCol ._64a > div[style*="height"] {
+    height: auto !important;
+}
+
 .newsFeedComposer .home_right_column {
     min-height: 0 !important;
 }
