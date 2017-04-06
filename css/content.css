@@ -275,3 +275,18 @@
 }
 @media (max-width: 640px) { /* VGA */
 }
+
+/* Workaround for another HTML structure */
+
+#leftCol._1qkq._1qks {
+    position: relative !important;
+}
+
+#content_container > #rightCol,
+#content_container > #contentArea {
+    position: static !important;
+}
+
+#content_container > #rightCol {
+    margin-left: 12px !important;
+}
