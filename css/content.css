@@ -256,6 +256,31 @@
     background-repeat: no-repeat;
 }
 
+/* Read Later */
+
+.readLater {
+    float: right;
+    margin: -5px 10px 10px 5px;
+    visibility: hidden;
+}
+
+.userContentWrapper:hover .readLater, .fbUserContent:hover .readLater {
+    visibility: visible;
+}
+
+.readLater i {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background-image: url('chrome-extension://__MSG_@@extension_id__/image/bookmark.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.readLater.pinned i {
+    background-image: url('chrome-extension://__MSG_@@extension_id__/image/bookmarked.png');
+}
+
 /* Media Query */
 
 @media (max-width: 1920px) { /* WUXGA */
