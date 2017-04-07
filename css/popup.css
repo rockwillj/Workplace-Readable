@@ -1,0 +1,36 @@
+body {
+    min-width: 400px;
+}
+
+h4 {
+    color: #90949c;
+    margin: 8px 0 0;
+}
+
+ul {
+    padding-left: 0;
+    list-style-type: none;
+    color: #90949c;
+}
+
+span {
+    color: #373e4c;
+    margin: 0 2px;
+}
+
+a {
+    color: #365899;
+}
+
+img {
+    vertical-align: text-bottom;
+}
+
+img:hover {
+    cursor: pointer;
+}
+
+#alert {
+    color: green;
+    margin-top: 1em;
+}
