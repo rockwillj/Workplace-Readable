@@ -54,7 +54,14 @@ $(function () {
     }
 
     function resetOptions() {
-        chrome.storage.sync.clear(function () {
+        chrome.storage.sync.remove([
+            'liquidDesign',
+            'sidebarDisplay',
+            'trendingDisplay',
+            'singleLineTrending',
+            'color',
+            'bgColor'
+        ], function () {
             loadOptions();
             updateStatus('Options reset.');
         });
