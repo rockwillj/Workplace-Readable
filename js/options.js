@@ -1,5 +1,6 @@
 $(function () {
     loadOptions();
+
     $('#save').click(saveOptions);
     $('#reset').click(resetOptions);
     $('.color input[type="text"]').change(function () {
@@ -19,7 +20,7 @@ $(function () {
             liquidDesign: false,
             sidebarDisplay: true,
             trendingDisplay: true,
-            singleLineTrending: false,
+            singleLineTrending: true,
             color: '#365899',
             bgColor: '#ffff00'
         }, function (items) {
