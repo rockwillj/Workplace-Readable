@@ -37,7 +37,7 @@ function addExpandAllButton($content) {
 
     if (shouldAdd) {
         var $element = $('<a class="expandAll _42ft _4jy0 _4jy4 _517h _51sy" role="button" href="#">'
-            + '<i class="_3-8_ img"></i>Expand All</a>');
+            + '<i class="img"></i></a>');
         $content.prepend($element);
 
         $element.click(function () {

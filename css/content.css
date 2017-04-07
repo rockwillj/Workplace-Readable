@@ -244,14 +244,19 @@
 
 .expandAll {
     float: right;
-    margin: -5px 20px 10px 10px;
+    margin: -5px 10px 10px 10px;
+    visibility: hidden;
+}
+
+.userContentWrapper:hover .expandAll, .fbUserContent:hover .expandAll {
+    visibility: visible;
 }
 
 .expandAll i {
     display: inline-block;
-    width: 12px;
-    height: 12px;
-    background-image: url('chrome-extension://__MSG_@@extension_id__/image/plus.png');
+    width: 18px;
+    height: 18px;
+    background-image: url('chrome-extension://__MSG_@@extension_id__/image/expand.png');
     background-size: cover;
     background-repeat: no-repeat;
 }
