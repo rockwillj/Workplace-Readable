@@ -23,7 +23,13 @@
                 "*://*.facebook.com/*"
             ],
             "exclude_matches": [
-                "*://www.facebook.com/*"
+                "*://www.facebook.com/*",
+                "*://developers.facebook.com/*",
+                "*://l.facebook.com/*",
+                "*://pixel.facebook.com/*",
+                "*://upload.facebook.com/*",
+                "*://vupload-edge.facebook.com/*",
+                "*://vupload2.facebook.com/*"
             ],
             "js": [
                 "js/jquery-2.2.4.min.js",
