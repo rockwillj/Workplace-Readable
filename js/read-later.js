@@ -7,9 +7,6 @@ String.prototype.truncate = function (length) {
 };
 
 $(function () {
-    // Save hostname to generate permanent links in popup.html
-    chrome.storage.sync.set({ hostname: location.hostname });
-
     $(document).on('mouseenter', '.userContentWrapper, .fbUserContent', function () {
         if ($(this).find('.userContentWrapper, .fbUserContent').length > 0) {
             return; // this is not body but header content
@@ -56,7 +53,7 @@ $(function () {
      * Save a post to read later to chrome.storage
      */
     function addPost($wrapper, url, callback) {
-        chrome.storage.sync.get({ posts: [] }, function (items) {
+        chrome.storage.sync.get({ posts: [], hostname: '' }, function (items) {
             var author = $wrapper.find('.fwb > a[href*="profile.php"]').first().text();
             var group = $wrapper.find('.fcg > a.profileLink[href*="/groups/"], .fcg > a._wpv[href*="/groups/"]').first().text();
             if (group == "") {
@@ -76,6 +73,12 @@ $(function () {
             items.posts.push(post);
 
             chrome.storage.sync.set({ posts: items.posts }, callback);
+
+            // Save hostname to generate permanent links in popup.html
+            if (items.hostname != location.hostname) {
+                chrome.storage.sync.set({ hostname: location.hostname });
+            }
+
         });
     }
 
