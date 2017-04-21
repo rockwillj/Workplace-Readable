@@ -31,7 +31,7 @@ $(function () {
 
             $element = $(`
                 <a class="readLater ${isPinned ? 'pinned' : ''} _42ft _4jy0 _4jy4 _517h _51sy"
-                    role="button" href="#">
+                    role="button" title="Read Later" href="#">
                     <i class="img"></i>
                 </a>`)
                 .click(function () {
