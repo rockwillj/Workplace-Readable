@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
     "name": "Workplace Readable",
-    "version": "1.7.0",
+    "version": "1.7.1",
     "description": "Chrome extension to make Workplace a bit easier to read",
     "icons": {
         "16": "image/icon16.png",
