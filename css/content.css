@@ -158,6 +158,39 @@
     background: transparent !important;
 }
 
+/* Expand/Collapse Pagelet Sidebar Horizontally */
+
+.fbChatSidebar::before {
+    content: '';
+    position: absolute;
+    width: 28px;
+    height: 100%;
+    margin-left: -28px;
+}
+
+#chatSidebarSlider {
+    /* image size = 24x24px, margin = 4px */
+    background-image: url('chrome-extension://__MSG_@@extension_id__/image/ic_chevron_right.png');
+    background-position: center right;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 50%;
+    width: 28px;
+    height: 32px;
+    margin-top: -4px;
+    margin-left: -28px;
+    cursor: pointer;
+    visibility: hidden;
+}
+
+.fbChatSidebar:hover #chatSidebarSlider {
+    visibility: visible;
+}
+
+.collapsed #chatSidebarSlider {
+    background-image: url('chrome-extension://__MSG_@@extension_id__/image/ic_chevron_left.png');
+}
+
 /* Profile */
 
 .timelineLayout #mainContainer #contentArea {

@@ -43,6 +43,8 @@
         }
     ],
     "web_accessible_resources": [
+        "image/ic_chevron_right.png",
+        "image/ic_chevron_left.png",
         "image/plus.png",
         "image/minus.png",
         "image/top.png",

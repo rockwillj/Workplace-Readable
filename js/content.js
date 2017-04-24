@@ -82,6 +82,21 @@ $(function () {
     $(document).on('click', '#pagelet_sidebar ._55ob', function () {
         $(this).parent().toggleClass('expandedList');
     });
+
+    /*
+     * Expand/Collapse Pagelet Sidebar Horizontally
+     */
+    $(document).on('mouseenter', '.fbChatSidebar', function () {
+        $sidebar = $(this);
+        if ($sidebar.children('#chatSidebarSlider').length == 0) {
+            $(`<span id="chatSidebarSlider"></span>`).click(function () {
+                var margin = $sidebar.hasClass('collapsed') ? 0 : -$sidebar.width();
+                $sidebar.animate({ marginRight: margin }, 'slow', function () {
+                    $sidebar.toggleClass('collapsed');
+                });
+            }).appendTo($sidebar);
+        }
+    });
 });
 
 // onpage: Trigger ajax paging event
