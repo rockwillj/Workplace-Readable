@@ -211,14 +211,14 @@
     position: fixed;
     bottom: 0;
     right: 16px;
-    padding-left: 8px;
-    padding-bottom: 29px;
+    padding-left: 4px;
+    padding-bottom: 25px;
     display: none;
 }
 
 .sidebarMode #scrollToTop {
     right: auto;
-    padding-bottom: 4px;
+    padding-bottom: 0;
 }
 
 #scrollToTop a {
@@ -227,15 +227,16 @@
 
 #scrollToTop i {
     display: inline-block;
-    width: 30px;
-    height: 30px;
-    background-image: url('chrome-extension://__MSG_@@extension_id__/image/top.png');
-    background-size: cover;
+    /* image size = 24x24px, margin = 4px */
+    width: 32px;
+    height: 32px;
+    background-image: url('chrome-extension://__MSG_@@extension_id__/image/ic_play_circle_outline.png');
+    background-position: center center;
     background-repeat: no-repeat;
 }
 
 #scrollToTop i:hover {
-    background-position: -30px 0;
+    background-image: url('chrome-extension://__MSG_@@extension_id__/image/ic_play_circle_filled.png');
 }
 
 /* Expand All */
@@ -254,7 +255,7 @@
     display: inline-block;
     width: 18px;
     height: 18px;
-    background-image: url('chrome-extension://__MSG_@@extension_id__/image/expand.png');
+    background-image: url('chrome-extension://__MSG_@@extension_id__/image/ic_format_line_spacing.png');
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -275,13 +276,13 @@
     display: inline-block;
     width: 18px;
     height: 18px;
-    background-image: url('chrome-extension://__MSG_@@extension_id__/image/bookmark.png');
+    background-image: url('chrome-extension://__MSG_@@extension_id__/image/ic_bookmark_border.png');
     background-size: cover;
     background-repeat: no-repeat;
 }
 
 .readLater.pinned i {
-    background-image: url('chrome-extension://__MSG_@@extension_id__/image/bookmarked.png');
+    background-image: url('chrome-extension://__MSG_@@extension_id__/image/ic_bookmark.png');
 }
 
 /* Media Query */

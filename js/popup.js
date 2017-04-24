@@ -24,7 +24,7 @@ $(function () {
                                 by <span>${post.author}</span>
                                 in <span>${post.group}</span>
                                 at <span>${date.getMonth() + 1}/${date.getDate()}</span>
-                                <img class="delete" src="../image/delete.png">
+                                <img class="delete" src="../image/ic_delete_forever.png">
                             </li>
                         </ul>
                     </div>`);

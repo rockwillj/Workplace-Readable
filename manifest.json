@@ -45,10 +45,11 @@
     "web_accessible_resources": [
         "image/ic_chevron_right.png",
         "image/ic_chevron_left.png",
-        "image/top.png",
-        "image/expand.png",
-        "image/bookmark.png",
-        "image/bookmarked.png"
+        "image/ic_play_circle_outline.png",
+        "image/ic_play_circle_filled.png",
+        "image/ic_format_line_spacing.png",
+        "image/ic_bookmark.png",
+        "image/ic_bookmark_border.png"
     ],
     "options_ui": {
         "page": "html/options.html",
