@@ -19,6 +19,7 @@ $(function () {
     chrome.storage.sync.get({
         liquidDesign: false,
         sidebarDisplay: true,
+        topGroupsDisplay: true,
         trendingDisplay: true,
         singleLineTrending: true,
         color: '#365899',
@@ -32,6 +33,9 @@ $(function () {
         // Display
         if (items.sidebarDisplay) {
             $('html').addClass('sidebarDisplay');
+        }
+        if (items.topGroupsDisplay) {
+            $('html').addClass('topGroupsDisplay');
         }
         if (items.trendingDisplay) {
             $('html').addClass('trendingDisplay');

@@ -123,6 +123,10 @@
     display: none !important;
 }
 
+html:not(.topGroupsDisplay) .fbChatSidebar ._1vze {
+    display: none;
+}
+
 /* Expand/Collapse Pagelet Sidebar Horizontally */
 
 .fbChatSidebar::before {

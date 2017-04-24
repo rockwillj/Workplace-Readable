@@ -19,6 +19,7 @@ $(function () {
         chrome.storage.sync.get({
             liquidDesign: false,
             sidebarDisplay: true,
+            topGroupsDisplay: true,
             trendingDisplay: true,
             singleLineTrending: true,
             color: '#365899',
@@ -26,6 +27,7 @@ $(function () {
         }, function (items) {
             $('#liquidDesign').prop('checked', items.liquidDesign);
             $('#sidebarDisplay').prop('checked', items.sidebarDisplay);
+            $('#topGroupsDisplay').prop('checked', items.topGroupsDisplay);
             $('#trendingDisplay').prop('checked', items.trendingDisplay).change();
             $('#singleLineTrending').prop('checked', items.singleLineTrending);
             $('#mentionColor').next('input').andSelf().val(items.color);
@@ -36,6 +38,7 @@ $(function () {
     function saveOptions() {
         var liquidDesign = $('#liquidDesign').prop('checked');
         var sidebarDisplay = $('#sidebarDisplay').prop('checked');
+        var topGroupsDisplay = $('#topGroupsDisplay').prop('checked');
         var trendingDisplay = $('#trendingDisplay').prop('checked');
         var singleLineTrending = $('#singleLineTrending').prop('checked');
         var color = $('#mentionColor').val();
@@ -43,6 +46,7 @@ $(function () {
         chrome.storage.sync.set({
             liquidDesign: liquidDesign,
             sidebarDisplay: sidebarDisplay,
+            topGroupsDisplay: topGroupsDisplay,
             trendingDisplay: trendingDisplay,
             singleLineTrending: singleLineTrending,
             color: color,
@@ -58,6 +62,7 @@ $(function () {
         chrome.storage.sync.remove([
             'liquidDesign',
             'sidebarDisplay',
+            'topGroupsDisplay',
             'trendingDisplay',
             'singleLineTrending',
             'color',
