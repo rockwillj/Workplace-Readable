@@ -111,12 +111,12 @@
 
 /* Pagelet Sidebar */
 
-#pagelet_sidebar {
-    display: none;
+.fbChatSidebar {
+    margin-right: -205px;
 }
 
-.sidebarDisplay #pagelet_sidebar {
-    display: block;
+.sidebarDisplay .fbChatSidebar {
+    margin-right: 0;
 }
 
 .sidebarMode:not(.sidebarDisplay) ._55fl {

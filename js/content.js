@@ -82,6 +82,9 @@ $(function () {
     $(document).on('mouseenter', '.fbChatSidebar', function () {
         $sidebar = $(this);
         if ($sidebar.children('#chatSidebarSlider').length == 0) {
+            if (!$('html').hasClass('sidebarDisplay')) {
+                $sidebar.addClass('collapsed');
+            }
             $(`<span id="chatSidebarSlider"></span>`).click(function () {
                 var margin = $sidebar.hasClass('collapsed') ? 0 : -$sidebar.width();
                 $sidebar.animate({ marginRight: margin }, 'slow', function () {
