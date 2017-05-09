@@ -33,6 +33,8 @@ $(function () {
         // Display
         if (items.sidebarDisplay) {
             $('html').addClass('sidebarDisplay');
+        } else {
+            $('#pagelet_sidebar').addClass('collapsed');
         }
         if (items.topGroupsDisplay) {
             $('html').addClass('topGroupsDisplay');
@@ -84,15 +86,13 @@ $(function () {
      * Expand/Collapse Pagelet Sidebar Horizontally
      */
     $(document).on('mouseenter', '.fbChatSidebar', function () {
+        $pagelet = $('#pagelet_sidebar');
         $sidebar = $(this);
         if ($sidebar.children('#chatSidebarSlider').length == 0) {
-            if (!$('html').hasClass('sidebarDisplay')) {
-                $sidebar.addClass('collapsed');
-            }
             $(`<span id="chatSidebarSlider"></span>`).click(function () {
-                var margin = $sidebar.hasClass('collapsed') ? 0 : -$sidebar.width();
+                var margin = $pagelet.hasClass('collapsed') ? 0 : -$sidebar.width();
                 $sidebar.animate({ marginRight: margin }, function () {
-                    $sidebar.toggleClass('collapsed');
+                    $pagelet.toggleClass('collapsed');
                 });
             }).appendTo($sidebar);
         }

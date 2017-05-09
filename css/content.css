@@ -156,7 +156,7 @@ html:not(.topGroupsDisplay) .fbChatSidebar ._1vze {
     visibility: visible;
 }
 
-.fbChatSidebar.collapsed::before {
+.collapsed .fbChatSidebar::before {
     background-image: url('chrome-extension://__MSG_@@extension_id__/image/ic_chevron_left.png');
 }
 
