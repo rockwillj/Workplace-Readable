@@ -30,14 +30,15 @@ $(function () {
         });
 
         if (shouldAdd) {
-            var $element = $('<a class="expandAll _42ft _4jy0 _4jy4 _517h _51sy" role="button" title="Expand All" href="#">'
-                + '<i class="img"></i></a>');
-            $content.prepend($element);
-
-            $element.click(function () {
-                expandAll($wrapper[0]);
-                $(this).fadeOut('slow');
-            });
+            $(`<a class="expandAll _42ft _4jy0 _4jy4 _517h _51sy"
+                   role="button" title="Expand All" href="#">
+                   <i class="img"></i>
+               </a>`)
+                .click(function () {
+                    expandAll($wrapper[0]);
+                    $(this).fadeOut('slow');
+                })
+                .prependTo($content);
         }
     }
 

@@ -23,29 +23,29 @@ $(function () {
             var url = $wrapper.find('a._5pcq').attr('href');
             var isPinned = getPostIndexOf(items.posts, url) != -1;
 
-            $readLater = $content.children('.readLater');
+            var $readLater = $content.children('.readLater');
             if ($readLater.length > 0) {
                 $readLater.toggleClass('pinned', isPinned);
                 return;
             }
 
-            $element = $(`
-                <a class="readLater ${isPinned ? 'pinned' : ''} _42ft _4jy0 _4jy4 _517h _51sy"
-                    role="button" title="Read Later" href="#">
-                    <i class="img"></i>
-                </a>`)
+            $(`<a class="readLater ${isPinned ? 'pinned' : ''} _42ft _4jy0 _4jy4 _517h _51sy"
+                   role="button" title="Read Later" href="#">
+                   <i class="img"></i>
+               </a>`)
                 .click(function () {
-                    var isPinned = $(this).hasClass('pinned');
+                    var $this = $(this);
+                    var isPinned = $this.hasClass('pinned');
                     var toggleClass = function () {
-                        $element.toggleClass('pinned');
+                        $this.toggleClass('pinned');
                     };
                     if (isPinned) {
                         removePost(url, toggleClass);
                     } else {
                         addPost($wrapper, url, toggleClass);
                     }
-                });
-            $content.prepend($element);
+                })
+                .prependTo($content);
         });
     }
 
