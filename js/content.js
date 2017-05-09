@@ -99,23 +99,6 @@ $(function () {
     });
 });
 
-// onpage: Trigger ajax paging event
-$(document).bind('wpr:onload', function () {
-    var $pager = $('#pagelet_group_pager').prev(); // Group
-    if ($pager.length == 0) {
-        $pager = $('#contentArea div[id^="more_pager_pagelet_"]').children(); // Home
-    }
-    if ($pager.length > 0) {
-        var pagingObserver = new MutationObserver(function (mutation) {
-            var addedNodes = mutation[0].addedNodes;
-            for (var i = 0; i < addedNodes.length; i++) {
-                $(document).trigger('wpr:onpage', addedNodes[i]);
-            }
-        });
-        pagingObserver.observe($pager[0], { childList: true, subtree: true });
-    }
-});
-
 /*
  * Show "Trending Posts" above content area
  */
