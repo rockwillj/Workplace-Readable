@@ -2,7 +2,7 @@
  * Place "Expand All" button in each user content
  */
 
-(function () {
+$(function () {
 $(document).on('mouseenter', '.userContentWrapper, .fbUserContent', function () {
     if ($(this).find('.userContentWrapper, .fbUserContent').length > 0) {
         return; // this is not body but header content
@@ -99,4 +99,4 @@ function expandAll(content) {
         }
     }, 1000);
 }
-})();
+});
