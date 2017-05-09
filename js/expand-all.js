@@ -14,7 +14,7 @@ $(function () {
 
     // Add "Expand All" button in user content
     function addExpandAllButton($content) {
-        if ($content.children('.expandAll').length > 0) {
+        if ($content.prev().children('.expandAll').length > 0) {
             return; // already added
         }
 
@@ -38,7 +38,7 @@ $(function () {
                     expandAll($wrapper[0]);
                     $(this).fadeOut('slow');
                 })
-                .prependTo($content);
+                .prependTo($content.prev());
         }
     }
 

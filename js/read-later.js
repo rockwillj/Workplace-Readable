@@ -23,7 +23,7 @@ $(function () {
             var url = $wrapper.find('a._5pcq').attr('href');
             var isPinned = getPostIndexOf(items.posts, url) != -1;
 
-            var $readLater = $content.children('.readLater');
+            var $readLater = $content.prev().children('.readLater');
             if ($readLater.length > 0) {
                 $readLater.toggleClass('pinned', isPinned);
                 return;
@@ -45,7 +45,7 @@ $(function () {
                         addPost($wrapper, url, toggleClass);
                     }
                 })
-                .prependTo($content);
+                .prependTo($content.prev());
         });
     }
 
@@ -60,8 +60,7 @@ $(function () {
                 group = $('head > title').text().replace(/^\(\d+\) /, '');
             }
             var date = $wrapper.find('abbr').attr('data-utime');
-            var intro = $wrapper.find('.userContent').clone()
-                .find('.readLater, .expandAll').remove().end().text();
+            var intro = $wrapper.find('.userContent').text();
 
             var post = {
                 url: url,

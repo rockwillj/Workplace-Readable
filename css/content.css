@@ -251,7 +251,7 @@ html:not(.topGroupsDisplay) .fbChatSidebar ._1vze {
 
 .expandAll {
     float: right;
-    margin: -5px 10px 10px 10px;
+    margin: 0 4px 4px 4px;
     visibility: hidden;
 }
 
@@ -272,7 +272,7 @@ html:not(.topGroupsDisplay) .fbChatSidebar ._1vze {
 
 .readLater {
     float: right;
-    margin: -5px 10px 10px 5px;
+    margin: 0 24px 4px 4px;
     visibility: hidden;
 }
 
