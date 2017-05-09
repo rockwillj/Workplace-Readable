@@ -18,7 +18,7 @@ $(function () {
     function loadOptions() {
         chrome.storage.sync.get({
             liquidDesign: false,
-            sidebarDisplay: true,
+            sidebarDisplay: false,
             topGroupsDisplay: true,
             trendingDisplay: true,
             singleLineTrending: true,
