@@ -91,7 +91,7 @@ $(function () {
             }
             $(`<span id="chatSidebarSlider"></span>`).click(function () {
                 var margin = $sidebar.hasClass('collapsed') ? 0 : -$sidebar.width();
-                $sidebar.animate({ marginRight: margin }, 'slow', function () {
+                $sidebar.animate({ marginRight: margin }, function () {
                     $sidebar.toggleClass('collapsed');
                 });
             }).appendTo($sidebar);
