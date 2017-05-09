@@ -3,25 +3,19 @@
  */
 
 (function () {
-
-// User contents inserted dynamically on ajax loading
-$(document).bind('wpr:onload', function () {
-    $('#contentArea .userContent').each(function () {
-        addExpandAllButton($(this));
-    });
-});
-
-// User contents inserted dynamically on ajax paging
-$(document).bind('wpr:onpage', function (event, data) {
-    $(data).find('.userContent').each(function () {
-        addExpandAllButton($(this));
+$(document).on('mouseenter', '.userContentWrapper, .fbUserContent', function () {
+    if ($(this).find('.userContentWrapper, .fbUserContent').length > 0) {
+        return; // this is not body but header content
+    }
+    $(this).find('.userContent').each(function () {
+        addExpandAllButton($(this).not(':empty'));
     });
 });
 
 // Add "Expand All" button in user content
 function addExpandAllButton($content) {
-    if ($content.is(':empty') || $content.children('.expandAll').length > 0) {
-        return; // no need to add (empty or added already)
+    if ($content.children('.expandAll').length > 0) {
+        return; // already added
     }
 
     var shouldAdd = false;
@@ -105,5 +99,4 @@ function expandAll(content) {
         }
     }, 1000);
 }
-
 })();
