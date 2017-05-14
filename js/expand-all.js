@@ -38,7 +38,9 @@ $(function () {
                     expandAll($wrapper[0]);
                     $(this).fadeOut('slow');
                 })
-                .prependTo($content.prev());
+                .hide()
+                .prependTo($content.prev())
+                .show(300);
         }
     }
 

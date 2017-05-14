@@ -45,7 +45,9 @@ $(function () {
                         addPost($wrapper, url, toggleClass);
                     }
                 })
-                .prependTo($content.prev());
+                .hide()
+                .prependTo($content.prev())
+                .show(300);
         });
     }
 
