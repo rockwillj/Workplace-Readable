@@ -18,7 +18,8 @@ $(function () {
     // Load options from chrome.storage
     chrome.storage.sync.get({
         liquidDesign: false,
-        sidebarDisplay: true,
+        sidebarDisplay: false,
+        topGroupsDisplay: true,
         trendingDisplay: true,
         singleLineTrending: true,
         color: '#365899',
@@ -32,6 +33,11 @@ $(function () {
         // Display
         if (items.sidebarDisplay) {
             $('html').addClass('sidebarDisplay');
+        } else {
+            $('#pagelet_sidebar').addClass('collapsed');
+        }
+        if (items.topGroupsDisplay) {
+            $('html').addClass('topGroupsDisplay');
         }
         if (items.trendingDisplay) {
             $('html').addClass('trendingDisplay');
@@ -77,28 +83,20 @@ $(function () {
     });
 
     /*
-     * Expand/Collapse Contacts (More Coworkers) List in Pagelet Sidebar
+     * Expand/Collapse Pagelet Sidebar Horizontally
      */
-    $(document).on('click', '#pagelet_sidebar ._55ob', function () {
-        $(this).parent().toggleClass('expandedList');
+    $(document).on('mouseenter', '.fbChatSidebar', function () {
+        $pagelet = $('#pagelet_sidebar');
+        $sidebar = $(this);
+        if ($sidebar.children('#chatSidebarSlider').length == 0) {
+            $(`<span id="chatSidebarSlider"></span>`).click(function () {
+                var margin = $pagelet.hasClass('collapsed') ? 0 : -$sidebar.width();
+                $sidebar.animate({ marginRight: margin }, function () {
+                    $pagelet.toggleClass('collapsed');
+                });
+            }).appendTo($sidebar);
+        }
     });
-});
-
-// onpage: Trigger ajax paging event
-$(document).bind('wpr:onload', function () {
-    var $pager = $('#pagelet_group_pager').prev(); // Group
-    if ($pager.length == 0) {
-        $pager = $('#contentArea div[id^="more_pager_pagelet_"]').children(); // Home
-    }
-    if ($pager.length > 0) {
-        var pagingObserver = new MutationObserver(function (mutation) {
-            var addedNodes = mutation[0].addedNodes;
-            for (var i = 0; i < addedNodes.length; i++) {
-                $(document).trigger('wpr:onpage', addedNodes[i]);
-            }
-        });
-        pagingObserver.observe($pager[0], { childList: true, subtree: true });
-    }
 });
 
 /*

@@ -111,51 +111,57 @@
 
 /* Pagelet Sidebar */
 
-#pagelet_sidebar {
-    display: none;
+.fbChatSidebar {
+    margin-right: -205px;
 }
 
-.sidebarDisplay #pagelet_sidebar {
-    display: block;
+.sidebarDisplay .fbChatSidebar {
+    margin-right: 0;
 }
 
 .sidebarMode:not(.sidebarDisplay) ._55fl {
     display: none !important;
 }
 
-#pagelet_sidebar ._55ob {
-    cursor: pointer;
-}
-
-#pagelet_sidebar ._55ob:hover {
-    background-color: #d8d6d4;
-}
-
-#pagelet_sidebar ._55oc > em::before {
-    display: inline-block;
-    width: 10px;
-    height: 10px;
-    content: '';
-    background-image: url('chrome-extension://__MSG_@@extension_id__/image/plus.png');
-    background-size: cover;
-    margin-right: 4px;
-    margin-bottom: -1px;
-}
-
-#pagelet_sidebar .expandedList ._55oc > em::before {
-    background-image: url('chrome-extension://__MSG_@@extension_id__/image/minus.png');
-}
-
-#pagelet_sidebar .fbChatOrderedList ul {
+html:not(.topGroupsDisplay) .fbChatSidebar ._1vze {
     display: none;
 }
 
-#pagelet_sidebar .fbChatOrderedList .expandedList > ul {
-    display: block;
+/* Expand/Collapse Pagelet Sidebar Horizontally */
+
+.fbChatSidebar::before, #chatSidebarSlider {
+    /* image size = 24x24px, margin = 4px */
+    background-position: center right;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 50%;
+    width: 28px;
+    height: 32px;
+    margin-left: -28px;
+    margin-top: 5px;
 }
 
-.fbChatSidebar ._4oes {
-    background: transparent !important;
+.fbChatSidebar::before {
+    content: '';
+    background-image: url('chrome-extension://__MSG_@@extension_id__/image/ic_chevron_right.png');
+}
+
+#chatSidebarSlider {
+    background-image: url('chrome-extension://__MSG_@@extension_id__/image/ic_chevron_right_hover.png');
+    cursor: pointer;
+    visibility: hidden;
+}
+
+.fbChatSidebar:hover #chatSidebarSlider {
+    visibility: visible;
+}
+
+.collapsed .fbChatSidebar::before {
+    background-image: url('chrome-extension://__MSG_@@extension_id__/image/ic_chevron_left.png');
+}
+
+.collapsed #chatSidebarSlider {
+    background-image: url('chrome-extension://__MSG_@@extension_id__/image/ic_chevron_left_hover.png');
 }
 
 /* Profile */
@@ -213,14 +219,14 @@
     position: fixed;
     bottom: 0;
     right: 16px;
-    padding-left: 8px;
-    padding-bottom: 29px;
+    padding-left: 4px;
+    padding-bottom: 25px;
     display: none;
 }
 
 .sidebarMode #scrollToTop {
     right: auto;
-    padding-bottom: 4px;
+    padding-bottom: 0;
 }
 
 #scrollToTop a {
@@ -229,22 +235,23 @@
 
 #scrollToTop i {
     display: inline-block;
-    width: 30px;
-    height: 30px;
-    background-image: url('chrome-extension://__MSG_@@extension_id__/image/top.png');
-    background-size: cover;
+    /* image size = 24x24px, margin = 4px */
+    width: 32px;
+    height: 32px;
+    background-image: url('chrome-extension://__MSG_@@extension_id__/image/ic_play_circle_outline.png');
+    background-position: center center;
     background-repeat: no-repeat;
 }
 
 #scrollToTop i:hover {
-    background-position: -30px 0;
+    background-image: url('chrome-extension://__MSG_@@extension_id__/image/ic_play_circle_filled.png');
 }
 
 /* Expand All */
 
 .expandAll {
     float: right;
-    margin: -5px 10px 10px 10px;
+    margin: 0 4px 4px 4px;
     visibility: hidden;
 }
 
@@ -256,7 +263,7 @@
     display: inline-block;
     width: 18px;
     height: 18px;
-    background-image: url('chrome-extension://__MSG_@@extension_id__/image/expand.png');
+    background-image: url('chrome-extension://__MSG_@@extension_id__/image/ic_format_line_spacing.png');
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -265,7 +272,7 @@
 
 .readLater {
     float: right;
-    margin: -5px 10px 10px 5px;
+    margin: 0 24px 4px 4px;
     visibility: hidden;
 }
 
@@ -277,13 +284,13 @@
     display: inline-block;
     width: 18px;
     height: 18px;
-    background-image: url('chrome-extension://__MSG_@@extension_id__/image/bookmark.png');
+    background-image: url('chrome-extension://__MSG_@@extension_id__/image/ic_bookmark_border.png');
     background-size: cover;
     background-repeat: no-repeat;
 }
 
 .readLater.pinned i {
-    background-image: url('chrome-extension://__MSG_@@extension_id__/image/bookmarked.png');
+    background-image: url('chrome-extension://__MSG_@@extension_id__/image/ic_bookmark.png');
 }
 
 /* Media Query */
