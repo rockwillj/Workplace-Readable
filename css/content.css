@@ -247,16 +247,20 @@ html:not(.topGroupsDisplay) .fbChatSidebar ._1vze {
     background-image: url('chrome-extension://__MSG_@@extension_id__/image/ic_play_circle_filled.png');
 }
 
+/* mouse hover */
+a.hoverVisible {
+    visibility: hidden;
+}
+
+.fbUserContent:hover a.hoverVisible, .userContentWrapper:hover a.hoverVisible {
+    visibility: visible;
+}
+
 /* Expand All */
 
 .expandAll {
     float: right;
     margin: 0 4px 4px 4px;
-    visibility: hidden;
-}
-
-.userContentWrapper:hover .expandAll, .fbUserContent:hover .expandAll {
-    visibility: visible;
 }
 
 .expandAll i {
@@ -273,11 +277,6 @@ html:not(.topGroupsDisplay) .fbChatSidebar ._1vze {
 .readLater {
     float: right;
     margin: 0 24px 4px 4px;
-    visibility: hidden;
-}
-
-.userContentWrapper:hover .readLater, .fbUserContent:hover .readLater {
-    visibility: visible;
 }
 
 .readLater i {
