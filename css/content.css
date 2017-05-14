@@ -135,10 +135,14 @@ html:not(.topGroupsDisplay) .fbChatSidebar ._1vze {
     background-repeat: no-repeat;
     position: absolute;
     top: 50%;
-    width: 28px;
+    width: 32px;
     height: 32px;
-    margin-left: -28px;
+    margin-left: -32px;
     margin-top: 5px;
+}
+
+.mac .fbChatSidebar::before, .mac #chatSidebarSlider {
+    background-position: center left; /* to avoid overlapping by scrollbar */
 }
 
 .fbChatSidebar::before {
