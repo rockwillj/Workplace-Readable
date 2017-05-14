@@ -249,11 +249,12 @@ html:not(.topGroupsDisplay) .fbChatSidebar ._1vze {
 
 /* mouse hover */
 a.hoverVisible {
-    visibility: hidden;
+    opacity: 0;
+    transition: opacity 400ms;
 }
 
 .fbUserContent:hover a.hoverVisible, .userContentWrapper:hover a.hoverVisible {
-    visibility: visible;
+    opacity: 1;
 }
 
 /* Expand All */
