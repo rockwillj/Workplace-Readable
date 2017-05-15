@@ -234,7 +234,7 @@ html:not(.topGroupsDisplay) .fbChatSidebar ._1vze {
 }
 
 .sidebarMode #pagelet_dock ._48gf {
-  height: 0;
+  /*height: 0; FIXME the bootom toolbar of chat window won't displayed */
 }
 
 #scrollToTop a {
