@@ -327,3 +327,8 @@ html:not(.topGroupsDisplay) .fbChatSidebar ._1vze {
 #content_container > #rightCol {
     margin-left: 12px !important;
 }
+
+#content_container ._14i5 {
+  right: inherit;
+  width: 100% !important;
+}
