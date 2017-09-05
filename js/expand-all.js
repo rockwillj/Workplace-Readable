@@ -30,7 +30,7 @@ $(function () {
         });
 
         if (shouldAdd) {
-            $(`<a class="expandAll _42ft _4jy0 _4jy4 _517h _51sy"
+            $(`<a class="expandAll hoverVisible _42ft _4jy0 _4jy4 _517h _51sy"
                    role="button" title="Expand All" href="#">
                    <i class="img"></i>
                </a>`)
@@ -38,7 +38,9 @@ $(function () {
                     expandAll($wrapper[0]);
                     $(this).fadeOut('slow');
                 })
-                .prependTo($content.prev());
+                .hide()
+                .prependTo($content.prev())
+                .show(300);
         }
     }
 

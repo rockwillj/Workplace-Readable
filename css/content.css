@@ -135,10 +135,14 @@ html:not(.topGroupsDisplay) .fbChatSidebar ._1vze {
     background-repeat: no-repeat;
     position: absolute;
     top: 50%;
-    width: 28px;
+    width: 32px;
     height: 32px;
-    margin-left: -28px;
+    margin-left: -32px;
     margin-top: 5px;
+}
+
+.mac .fbChatSidebar::before, .mac #chatSidebarSlider {
+    background-position: center left; /* to avoid overlapping by scrollbar */
 }
 
 .fbChatSidebar::before {
@@ -229,6 +233,10 @@ html:not(.topGroupsDisplay) .fbChatSidebar ._1vze {
     padding-bottom: 0;
 }
 
+.sidebarMode #pagelet_dock ._48gf {
+  /*height: 0; FIXME the bootom toolbar of chat window won't displayed */
+}
+
 #scrollToTop a {
     text-decoration: none;
 }
@@ -245,6 +253,16 @@ html:not(.topGroupsDisplay) .fbChatSidebar ._1vze {
 
 #scrollToTop i:hover {
     background-image: url('chrome-extension://__MSG_@@extension_id__/image/ic_play_circle_filled.png');
+}
+
+/* mouse hover */
+a.hoverVisible {
+    opacity: 0;
+    transition: opacity 400ms;
+}
+
+.fbUserContent:hover a.hoverVisible, .userContentWrapper:hover a.hoverVisible {
+    opacity: 1;
 }
 
 /* Expand All */

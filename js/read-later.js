@@ -29,7 +29,7 @@ $(function () {
                 return;
             }
 
-            $(`<a class="readLater ${isPinned ? 'pinned' : ''} _42ft _4jy0 _4jy4 _517h _51sy"
+            $(`<a class="readLater hoverVisible ${isPinned ? 'pinned' : ''} _42ft _4jy0 _4jy4 _517h _51sy"
                    role="button" title="Read Later" href="#">
                    <i class="img"></i>
                </a>`)
@@ -45,7 +45,9 @@ $(function () {
                         addPost($wrapper, url, toggleClass);
                     }
                 })
-                .prependTo($content.prev());
+                .hide()
+                .prependTo($content.prev())
+                .show(300);
         });
     }
 
