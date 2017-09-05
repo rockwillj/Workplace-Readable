@@ -3,8 +3,8 @@
  */
 
 $(function () {
-    $(document).on('mouseenter', '.userContentWrapper, .fbUserContent', function () {
-        if ($(this).find('.userContentWrapper, .fbUserContent').length > 0) {
+    $(document).on('mouseenter', '.userContentWrapper, .fbUserContent, .fbUserPost', function () {
+        if ($(this).find('.userContentWrapper, .fbUserContent, .fbUserPost').length > 0) {
             return; // this is not body but header content
         }
         $(this).find('.userContent').each(function () {
@@ -19,7 +19,7 @@ $(function () {
         }
 
         var shouldAdd = false;
-        var $wrapper = $content.closest('.userContentWrapper, .fbUserContent');
+        var $wrapper = $content.closest('.userContentWrapper, .fbUserContent, .fbUserPost');
         if ($wrapper.find('.fss, .see_more_link, .UFIPagerLink').length > 0) {
             shouldAdd = true;
         }

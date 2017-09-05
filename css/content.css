@@ -255,7 +255,7 @@ html:not(.topGroupsDisplay) .fbChatSidebar ._1vze {
     visibility: hidden;
 }
 
-.userContentWrapper:hover .expandAll, .fbUserContent:hover .expandAll {
+.userContentWrapper:hover .expandAll, .fbUserContent:hover .expandAll, .fbUserPost:hover .expandAll {
     visibility: visible;
 }
 
@@ -276,7 +276,7 @@ html:not(.topGroupsDisplay) .fbChatSidebar ._1vze {
     visibility: hidden;
 }
 
-.userContentWrapper:hover .readLater, .fbUserContent:hover .readLater {
+.userContentWrapper:hover .readLater, .fbUserContent:hover .readLater, .fbUserPost:hover .readLater {
     visibility: visible;
 }
 

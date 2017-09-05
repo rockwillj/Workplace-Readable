@@ -7,8 +7,8 @@ String.prototype.truncate = function (length) {
 };
 
 $(function () {
-    $(document).on('mouseenter', '.userContentWrapper, .fbUserContent', function () {
-        if ($(this).find('.userContentWrapper, .fbUserContent').length > 0) {
+    $(document).on('mouseenter', '.userContentWrapper, .fbUserContent, .fbUserPost', function () {
+        if ($(this).find('.userContentWrapper, .fbUserContent, .fbUserPost').length > 0) {
             return; // this is not body but header content
         }
         $(this).find('.userContent').each(function () {
@@ -19,7 +19,7 @@ $(function () {
     // Add "Read Later" button in user content
     function addReadLaterButton($content) {
         chrome.storage.sync.get({ posts: [] }, function (items) {
-            var $wrapper = $content.closest('.userContentWrapper, .fbUserContent');
+            var $wrapper = $content.closest('.userContentWrapper, .fbUserContent, .fbUserPost');
             var url = $wrapper.find('a._5pcq').attr('href');
             var isPinned = getPostIndexOf(items.posts, url) != -1;
 
